@@ -40,13 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BUSChange.cs" />
-    <Compile Include="BUSCreateTeam.cs" />
+    <Compile Include="BUSArrangement.cs" />
     <Compile Include="BUSForgot.cs" />
+    <Compile Include="BUSManageAcc.cs" />
     <Compile Include="BUSPlayer.cs" />
     <Compile Include="BUSRegister.cs" />
     <Compile Include="BUSSearch.cs" />
-    <Compile Include="BUSTeam.cs" />
+    <Compile Include="BUSTransfer.cs" />
     <Compile Include="BUSUser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -55,6 +55,10 @@
     <ProjectReference Include="..\DAO\DAO.csproj">
       <Project>{80c7688f-ef66-4ef1-8d42-8d468a563fac}</Project>
       <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{c6e4462b-386d-4358-a3b4-b83d12375d81}</Project>
+      <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

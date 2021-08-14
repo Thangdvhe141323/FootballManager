@@ -43,10 +43,10 @@ namespace BUS
             return (new DataProvider()).executeQuery("SELECT DISTINCT Position FROM Player");
         }
 
-        public bool AddPlayer(string name, string region,DateTime dateOfBirth, int teamid, string position, int physical,int attacking,int defending,int Speed,string image,string isMain)
+        public bool AddPlayer(string name, string region,DateTime dateOfBirth, int teamid, string position, int physical,int attacking,int defending,int Speed,string image,string isMain,string isSell)
         {
 
-            return (new DAOPlayer()).AddPlayer(name, region, dateOfBirth, teamid, position, physical, attacking, defending, Speed, image, isMain);
+            return (new DAOPlayer()).AddPlayer(name, region, dateOfBirth, teamid, position, physical, attacking, defending, Speed, image, isMain,isSell);
         }
 
         public bool AddSchedule(string content, string start, string end, DateTime date, int teamid)
@@ -65,6 +65,11 @@ namespace BUS
         {
 
             return (new DAOSchedule()).EditSchedule(ID,content, start, end, date, teamid);
+        }
+
+        public bool CheckMain(int PlayerID)
+        {
+            return (new DAOPlayer()).CheckMain(PlayerID);
         }
 
         public bool DeletePlayer(int playerID)
